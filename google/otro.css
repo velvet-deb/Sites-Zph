@@ -81,9 +81,9 @@ h1 {
 }
 
 /* Inputs */
-.input-wrapper { margin-bottom: 20px; }
+.input-wrapper { margin-bottom: 25px; }
 
-input[type="email"], input[type="password"] {
+input[type="email"], input[type="password"], input[type="text"] {
     width: 100%;
     padding: 14px;
     font-size: 16px;
