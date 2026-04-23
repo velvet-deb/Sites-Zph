@@ -5,12 +5,12 @@
     --google-blue-dark: #8ab4f8;
     --text-primary: #ffffff;
     --text-secondary: #ffffff;
-    --border-color: #3a3a3a;
+    --border-color: #ffffff;
 }
 
 body {
     font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bg-page); /* Invertido */
+    background-color: var(--bg-card); /* Invertido */
     color: var(--text-primary);
     display: flex;
     flex-direction: column; /* Para permitir el footer abajo */
@@ -28,41 +28,50 @@ body {
     border-radius: 28px;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    /*box-shadow: 0 4px 20px rgba(0,0,0,0.6);*/
     z-index: 1;
 }
 
 /* Espacio Logo */
 .logo-placeholder {
-    height: 150px;
+    height: 100px;
     margin-bottom: 0px;
+    
 }
 
 .logo-placeholder img {
     max-height: 50%; 
     width: auto;
+    
 }
 
 .side-info {
-    flex: 1.1; /* Un poco más ancho para el texto */
-    padding: 48px;
+    flex: 0.45; /* Un poco más ancho para el texto */
+    padding: 40px 20px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+}
+
+.side-form {
+    flex: 0.55;
+    padding: 40px 40px 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.side-form {
-    flex: 0.9;
-    padding: 48px;
+.side-info, .side-form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Alinea todo hacia arriba */
+    padding-top: 1px;          /* Controlamos el inicio con el padding */
 }
 
 h1 {
     font-size: 36px;
     font-weight: 400;
-    margin: 0 0 16px 0;
+    margin: -30px 0 10px 0;
 }
 
 .subtitle {
@@ -76,10 +85,10 @@ h1 {
 
 input[type="email"], input[type="password"] {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
     font-size: 16px;
     background-color: var(--bg-input); /* Resalta sobre el negro del card */
-    border: 1px solid var(--border-color);
+    border: 0.5px solid var(--border-color);
     border-radius: 8px;
     color: var(--text-primary);
     box-sizing: border-box;
