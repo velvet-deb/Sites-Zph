@@ -1,0 +1,170 @@
+:root {
+    --bg-page: #1e1e1e;           /* Ahora la página es gris muy oscuro */
+    --bg-card: #141414;           /* El recuadro ahora es negro plano puro */
+    --bg-input: #141414;          /* Los inputs resaltan sobre el fondo negro */
+    --google-blue-dark: #8ab4f8;
+    --text-primary: #ffffff;
+    --text-secondary: #ffffff;
+    --border-color: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-card); /* Invertido */
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column; /* Para permitir el footer abajo */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    width: 850px;
+    min-height: 400px;
+    background-color: var(--bg-card); /* Invertido a negro plano */
+    
+    border-radius: 28px;
+    display: flex;
+    overflow: hidden;
+    /*box-shadow: 0 4px 20px rgba(0,0,0,0.6);*/
+    z-index: 1;
+}
+
+/* Espacio Logo */
+.logo-placeholder {
+    height: 100px;
+    margin-bottom: 0px;
+    
+}
+
+.logo-placeholder img {
+    max-height: 50%; 
+    width: auto;
+    
+}
+
+.side-info {
+    flex: 0.45; /* Un poco más ancho para el texto */
+    padding: 40px 20px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+}
+
+.side-form {
+    flex: 0.55;
+    padding: 40px 40px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.side-info, .side-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea todo hacia arriba */
+    padding-top: 1px;          /* Controlamos el inicio con el padding */
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: -30px 0 10px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+/* Inputs */
+.input-wrapper { margin-bottom: 5px; }
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    background-color: var(--bg-input); /* Resalta sobre el negro del card */
+    border: 0.5px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid var(--google-blue-dark);
+}
+
+.action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 45px;
+
+}
+
+.btn-primary {
+    background-color: var(--google-blue-dark);
+    color: #121212;
+    font-weight: 600;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* Footer Exterior */
+.footer-external {
+    width: 850px; /* Misma anchura que el recuadro */
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.footer-links {
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a, .lang-selector {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover { color: var(--text-primary); }
+
+.lang-selector {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mixed-text {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 15px;
+}
+
+.mixed-text span {
+    color: var(--google-blue-dark);
+}
+
+@media (max-width: 850px) {
+    .auth-container, .footer-external {
+        width: 95%;
+    }
+    .auth-container { flex-direction: column; }
+    .footer-external { flex-direction: column; gap: 15px; text-align: center; }
+}
